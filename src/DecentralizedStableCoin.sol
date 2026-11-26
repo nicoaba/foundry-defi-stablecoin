@@ -66,4 +66,8 @@ contract DecentralizedStableCoin is ERC20Burnable, Ownable {
         }
         super.burn(_amount);
     }
+
+    function burnFrom(address account, uint256 value) public override onlyOwner {
+        super.burnFrom(account, value);
+    }
 }
